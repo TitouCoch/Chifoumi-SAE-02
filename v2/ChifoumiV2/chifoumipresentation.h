@@ -4,13 +4,12 @@
 #include <QObject>
 #include "chifoumimodele.h"
 
+///* ---- PARTIE PRESENTATION ---------------------------
 
 class ChifoumiVue;
 class ChifoumiPresentation : public QObject
 {
     Q_OBJECT
-
-
 public:
     //Type enuméré correspondant à l'état du jeu
     enum UnEtatJeu{etatInitial, jeuEnCours};
@@ -19,13 +18,22 @@ public:
 
     //Getter
     ChifoumiModele* getModele();
+    /* retourne le pointeur du modèle */
     ChifoumiVue* getVue();
+    /* retourne le pointeur de la vue */
     UnEtatJeu getEtatJeu();
+    /* retourne l'état du jeu */
 
     //Setter
     void setModele(ChifoumiModele *m);
+    /* initialise le pointeur du modèle avec la valeur
+       du paramètre m */
     void setVue(ChifoumiVue *v);
+    /* initialise le pointeur de la vue avec la valeur
+       du paramètre v */
     void setEtatJeu(UnEtatJeu e);
+    /* initialise l'état du jeu avec la valeur
+       du paramètre e */
 
 public slots :
     //Méthodes
@@ -43,7 +51,7 @@ private :
     //Attribut de la présentation
     ChifoumiModele *_leModele;	// pteur vers le modèle
     ChifoumiVue *_laVue;		// pteur vers la vue
-    UnEtatJeu _etatJeu;
+    UnEtatJeu _etatJeu;         // données membre de l'état du jeu
 
 };
 

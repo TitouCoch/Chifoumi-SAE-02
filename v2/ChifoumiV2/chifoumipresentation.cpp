@@ -2,6 +2,8 @@
 #include "chifoumivue.h"
 #include <QDebug>
 
+///* ---- PARTIE PRESENTATION ---------------------------
+
 ChifoumiPresentation::ChifoumiPresentation(ChifoumiModele *m, QObject *parent):
     QObject{parent}, _leModele(m)
 {

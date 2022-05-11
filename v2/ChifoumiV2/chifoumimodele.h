@@ -3,19 +3,15 @@
 
 #include <QObject>
 
+///* ---- PARTIE MODELE ---------------------------
+
 class ChifoumiModele : public QObject
 {
     Q_OBJECT
 public:
     enum UnCoup {pierre, papier, ciseau, rien };
-//    explicit ChifoumiModele(QObject *parent = nullptr);
-
-///* ---- PARTIE MODELE ---------------------------
-
-    ///* Méthodes du Modéle
-public:
+    // Méthodes du Modéle
     ChifoumiModele();
-
     // Getters
     UnCoup getCoupJoueur();
         /* retourne le dernier coup joué par le joueur */
@@ -29,7 +25,7 @@ public:
         /* détermine le gagnant 'J' pour joueur, 'M' pour machine, 'N' pour match nul
            en fonction du dernier coup joué par chacun d'eux */
     UnCoup genererUnCoup();
-/* retourne une valeur aléatoire = pierre, papier ou ciseau.
+    /* retourne une valeur aléatoire = pierre, papier ou ciseau.
    Utilisée pour faire jouer la machine */
 
     // Setters
@@ -60,9 +56,8 @@ public slots:
         /* initialise à rien les attributs coupJoueur et coupMachine
            NON indispensable */
 
-
-     ///* Attributs du Modèle
  private:
+    // Attributs du Modèle
     unsigned int scoreJoueur;   // score actuel du joueur
     unsigned int scoreMachine;  // score actuel de la Machine
     UnCoup coupJoueur;          // dernier coup joué par le joueur

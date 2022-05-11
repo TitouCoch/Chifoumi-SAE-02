@@ -2,6 +2,8 @@
 #include "ui_chifoumivue.h"
 #include <QDebug>
 
+///* ---- PARTIE VUE ---------------------------
+
 ChifoumiVue::ChifoumiVue(ChifoumiPresentation *p ,QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::ChifoumiVue), _laPresentation(p)
@@ -57,7 +59,7 @@ void ChifoumiVue::miseAJour(ChifoumiPresentation::UnEtatJeu etat)
         ui->boutonPierre->setEnabled(true);
         ui->boutonPapier->setEnabled(true);
         ui->boutonCiseau->setEnabled(true);
-        //Mise en couleur des label de noms et scores
+        //Mise en couleur des labels de noms et scores
         ui->lScoreJoueur->setStyleSheet("color: blue;");
         ui->lScoreMachine->setStyleSheet("color: blue;");
         ui->label_Vous->setStyleSheet("color: blue;");

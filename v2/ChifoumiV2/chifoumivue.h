@@ -5,6 +5,7 @@
 #include "chifoumimodele.h"
 #include "chifoumipresentation.h"
 
+///* ---- PARTIE VUE ---------------------------
 
 class ChifoumiPresentation;
 QT_BEGIN_NAMESPACE

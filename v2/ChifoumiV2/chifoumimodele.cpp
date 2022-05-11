@@ -1,6 +1,6 @@
 #include "chifoumimodele.h"
 
-///* ---- PARTIE MODULE ---------------------------
+///* ---- PARTIE MODELE ---------------------------
 
 
 ChifoumiModele::ChifoumiModele()
@@ -11,8 +11,7 @@ ChifoumiModele::ChifoumiModele()
 
 
 
-/// Getters
-
+// Getters
 ChifoumiModele::UnCoup ChifoumiModele::getCoupJoueur() {
     return this->coupJoueur;
 }
@@ -28,6 +27,8 @@ unsigned int ChifoumiModele::getScoreJoueur() {
 unsigned int ChifoumiModele::getScoreMachine() {
     return this->scoreMachine;
 }
+
+//Méthodes
 char ChifoumiModele::determinerGagnant(){
     char gagnantARetourner;
     // avant de commencer : match nul
@@ -90,8 +91,6 @@ char ChifoumiModele::determinerGagnant(){
     return gagnantARetourner;
 }
 
-///* Méthodes utilitaires du Module
-
 int randMinMax(int min, int max){
     /* pré-condition : min<max ;
        Le nbre aléatoire est compris entre [min, max[ */
@@ -102,7 +101,8 @@ ChifoumiModele::UnCoup ChifoumiModele::genererUnCoup()
 {
     UnCoup valeurGeneree;   // valeur à retourner
     unsigned int nbAleatoire;
-    nbAleatoire = randMinMax(1, 4);
+    nbAleatoire = randMinMax(1, 4); //retourne un nombre aléatoire entre 1 et 4
+    //Affectation du signe en fonction du nombre retourné précédement
     switch (nbAleatoire)
     {
     case 1 :
@@ -115,7 +115,7 @@ ChifoumiModele::UnCoup ChifoumiModele::genererUnCoup()
         valeurGeneree = ChifoumiModele::ciseau;
         break;
     }
-    return valeurGeneree;
+    return valeurGeneree; //rretourne la valeur
 }
 
 // Setters
